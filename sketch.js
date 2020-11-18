@@ -73,17 +73,19 @@ function draw() {
 function keyPressed() {
 	if(keyCode===LEFT_ARROW){
 		helicopterSprite.X=helicopterSprite.X-20;
-		translation={x:-20,y:0}
+		translation={x:-20,y:0};
+		Matter.Body.translate(helicopterIMG,translation);
 		packageSprite.X=packageSprite.X-20;
                 translation={x:-20,y:0}
 		Matter.Body.translate(packageBody,translation);
 	}
 else if(keyCode===RIGHT_ARROW){
 	helicopterSprite.X=helicopterSprite.X+20;
-	 translation={x:20,y:0}
+	translation={x:20,y:0};
+	Matter.Body.translate(helicopterIMG,translation);
 	packageSprite.X=packageSprite.X+20;
 	translation={x:20,y:0}
-    Matter.Body.translate(packageBody,translation);
+        Matter.Body.translate(packageBody,translation);
 	
 }
 
